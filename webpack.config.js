@@ -30,7 +30,8 @@ const extractConfig = {
 
 module.exports = {
   entry: {
-    './dist/block': './src/index.js',
+    './dist/block': './src/blocks/index.js',
+    './dist/filters': './src/filters/index.js',
   },
   output: {
     path: path.resolve(__dirname),

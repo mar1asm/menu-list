@@ -7,6 +7,7 @@ import BlockControl from './blockControl';
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const { RichText } = wp.blockEditor;
+const { select } = wp.data;
 
 export default registerBlockType("first-blocks/menu", {
     title: __("Menu", "first-blocks"),
@@ -107,6 +108,7 @@ export default registerBlockType("first-blocks/menu", {
                                         setAttributes({ items: newItems });
                                     }} />
                             </div>
+
                         </div>
                     ))}
 

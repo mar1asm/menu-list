@@ -16,6 +16,7 @@ defined('ABSPATH') || exit;
 function first_blocks_scripts() {
     $blockPath = '/dist/block.js';
     $stylePath = '/dist/block.css';
+    $filterPath = '/dist/filters.js';
 
     // Enqueue the bundled block JS file
     wp_enqueue_script(
@@ -31,6 +32,13 @@ function first_blocks_scripts() {
         plugins_url ($stylePath, __FILE__),
         '',
         filemtime( plugin_dir_path(__FILE__) . $stylePath )
+    );
+    
+    wp_enqueue_script(
+        'first-blocks-plugin-js',
+        plugins_url( $filterPath, __FILE__ ),
+        [ 'wp-i18n', 'wp-edit-post', 'wp-element', 'wp-editor', 'wp-components', 'wp-data', 'wp-plugins', 'wp-edit-post', 'wp-api' ],
+        filemtime( plugin_dir_path(__FILE__) . $filterPath )
     );
 
 }

@@ -1,6 +1,7 @@
 const { __ } = wp.i18n;
 const { addFilter } = wp.hooks;
 
+
 addFilter(
     "blocks.registerBlockType",
     "first-blocks/first-filters",
@@ -8,22 +9,14 @@ addFilter(
 );
 
 function extendWithFirstFilters(settings, name) {
-    console.log(name);  // my block isn't logged 
 
-    //check for block type
-
-    if ("first-blocks/menu" === name)  //this doesn't work
-    // if ("core/quote"===name)         this works
-    {
-        settings.description = __("Testing the filters...");
-        settings.category = "common";
-        settings.icon = "admin-tools";
-
-        if (settings.keywords) {
+    if ("first-blocks/menu" === name) {
+        if (settings.keywords && settings.keywords.length < 3) {
             settings.keywords.push(__("filter"));
         } else {
             settings.keywords = [__("filter")];
         }
+        settings.align = false;
     }
     return settings;
 }

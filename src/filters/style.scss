@@ -1,0 +1,49 @@
+.high-contrast .wp-block-first-blocks-menu,
+.wp-block-first-blocks-menu.high-contrast,
+.wp-block-first-blocks-menu.high-contrast .container,
+.wp-block-first-blocks-menu.high-contrast .container .col,
+.high-contrast .wp-block-first-blocks-menu .container,
+.high-contrast .wp-block-first-blocks-menu h1,
+.high-contrast .wp-block-first-blocks-menu h1 span,
+.high-contrast .wp-block-first-blocks-menu .container .col h3,
+.high-contrast .wp-block-first-blocks-menu .container .col div {
+    background-color: black;
+    color: white !important;
+}
+
+
+.container {
+    height: 100%;
+
+    .col {
+        float: left;
+        min-height: 150px;
+        width: 50%;
+        display: table;
+        padding: 10px;
+        border-bottom: 2px dotted;
+
+        .item-details {
+            height: 100%;
+            display: table-cell;
+
+            .item-name {
+                font-size: 25px;
+                font-weight: 500;
+            }
+        }
+
+        .item-price {
+            display: table-cell;
+            width: 15%;
+            height: 100%;
+        }
+
+    }
+}
+
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}

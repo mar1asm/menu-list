@@ -1,4 +1,7 @@
-const { BlockControls, BlockAlignmentToolbar } = wp.blockEditor;
+//I want to do the same thing using a filter
+
+
+/* const { BlockControls, BlockAlignmentToolbar } = wp.blockEditor;
 const { __ } = wp.i18n;
 const { Toolbar, Button, Tooltip } = wp.components;
 import classnames from 'classnames';
@@ -34,4 +37,5 @@ function BlockControl({ setAttributes, blockAlignment }) {
     )
 }
 
-export default BlockControl;
+export default BlockControl; */
+

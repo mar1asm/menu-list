@@ -7,10 +7,9 @@ import BlockControl from './blockControl';
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const { RichText } = wp.blockEditor;
-const { select } = wp.data;
 
 export default registerBlockType("first-blocks/menu", {
-    title: __("Menu", "first-blocks"),
+    title: (__("menu", "first-blocks")),
     description: __(
         "Simple Menu block",
         "first-blocks"
@@ -57,8 +56,8 @@ export default registerBlockType("first-blocks/menu", {
                     border: `${borderWidth}px solid ${borderColor}`,
                     padding: `${containerPadding}rem`
                 }}>
-                <BlockControl setAttributes={setAttributes}
-                    blockAlignment={blockAlignment} />
+                {/* <BlockControl setAttributes={setAttributes}
+                    blockAlignment={blockAlignment} /> */}
                 <RichText
                     tagName='h1'
                     placeholder={__('Menu', 'first-blocks')}
